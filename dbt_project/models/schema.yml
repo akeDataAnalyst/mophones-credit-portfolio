@@ -1,0 +1,49 @@
+version: 2
+
+sources:
+  - name: mophones_credit
+    database: mophones_credit
+    schema: mophones_credit
+    tables:
+      - name: customers
+      - name: loans
+      - name: repayments
+
+models:
+  - name: stg_customers
+    description: "Staging table for customer dimension"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_loans
+    description: "Staging table for loans fact"
+    columns:
+      - name: loan_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+
+  - name: stg_repayments
+    description: "Staging table for repayment transactions"
+
+  - name: int_loans_repayments
+    description: "Intermediate table joining loans with repayment performance"
+
+  - name: mart_portfolio_kpis
+    description: "Core portfolio health mart with key credit KPIs (PAR30, PAR60, etc.)"
+    columns:
+      - name: total_disbursed
+        description: "Total amount disbursed in KES"
+      - name: PAR30
+        description: "Portfolio at Risk - 30+ days delinquent"
+      - name: PAR60
+        description: "Portfolio at Risk - 60+ days delinquent"

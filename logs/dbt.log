@@ -1,0 +1,77 @@
+[0m12:01:08.231421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002932167A120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002932310A0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029323109D10>]}
+
+
+============================== 12:01:08.499934 | aab28383-355f-4774-95fe-551b76b81157 ==============================
+[0m12:01:08.499934 [info ] [MainThread]: Running with dbt=1.7.9
+[0m12:01:08.510070 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\tohiba\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init dbt_project', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:01:08.525917 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/tohiba/.dbt')}
+[0m12:01:08.529097 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m12:01:08.547593 [debug] [MainThread]: Starter project path: C:\Users\tohiba\Desktop\credit_portfolio_health_monitor\venv\Lib\site-packages\dbt\include\starter_project
+[0m12:01:11.757105 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:01:11.760313 [info ] [MainThread]: Setting up your profile.
+[0m10:36:41.059079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019B0CF06120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019B0E99BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019B0E99BB10>]}
+
+
+============================== 10:36:41.196691 | 9e322d01-07f9-4ad5-873e-616e83d5f711 ==============================
+[0m10:36:41.196691 [info ] [MainThread]: Running with dbt=1.7.9
+[0m10:36:41.212267 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\tohiba\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init dbt_project', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:36:41.223707 [debug] [MainThread]: Starter project path: C:\Users\tohiba\Desktop\credit_portfolio_health_monitor\venv\Lib\site-packages\dbt\include\starter_project
+[0m10:36:41.884172 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:36:41.888420 [info ] [MainThread]: Setting up your profile.
+[0m10:47:39.365147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028EFCB8A120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028EFF5FBED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028EFF5FBB10>]}
+
+
+============================== 10:47:39.406936 | 743c196c-5772-4db4-8613-a59379a2e764 ==============================
+[0m10:47:39.406936 [info ] [MainThread]: Running with dbt=1.7.9
+[0m10:47:39.409222 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\tohiba\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt init dbt_project', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m10:47:39.412458 [debug] [MainThread]: Starter project path: C:\Users\tohiba\Desktop\credit_portfolio_health_monitor\venv\Lib\site-packages\dbt\include\starter_project
+[0m10:47:39.515288 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:47:39.516615 [info ] [MainThread]: Setting up your profile.
+[0m10:50:20.472961 [debug] [MainThread]: Command `dbt init` succeeded at 10:50:20.472507 after 161.34 seconds
+[0m10:50:20.473776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028EF6CED6E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028EFF850950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028EFF7F5AE0>]}
+[0m10:50:20.474508 [debug] [MainThread]: Flushing usage events
