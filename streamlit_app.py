@@ -16,30 +16,41 @@ st.markdown("### Real-time Credit Risk & Portfolio Dashboard")
 # ==================== DATABASE CONNECTION (Cloud + Local) ====================
 @st.cache_resource
 def get_connection():
-    # For Streamlit Cloud (using st.secrets)
-    if "connections" in st.secrets:
-        db = st.secrets["connections"]["mysql"]
-        connection_string = (
-            f"mysql+pymysql://{db['username']}:{db['password']}@"
-            f"{db['host']}:{db['port']}/{db['database']}"
-        )
-    # For local development (using .env)
-    else:
-        connection_string = (
-            f"mysql+pymysql://{os.getenv('MYSQL_USER')}:{os.getenv('MYSQL_PASSWORD')}@"
-            f"{os.getenv('MYSQL_HOST')}:{os.getenv('MYSQL_PORT')}/{os.getenv('MYSQL_DATABASE')}"
-        )
-    
-    engine = create_engine(connection_string)
-    return engine
+    try:
+        # === Streamlit Cloud (using secrets) ===
+        if "connections" in st.secrets:
+            db = st.secrets["connections"]["mysql"]
+            connection_string = (
+                f"mysql+pymysql://{db['username']}:{db['password']}@"
+                f"{db['host']}:{db['port']}/{db['database']}"
+            )
+            st.success("Connected using Streamlit Secrets (Cloud)")
+        
+        # === Local Development (using .env) ===
+        else:
+            user = os.getenv('MYSQL_USER')
+            password = os.getenv('MYSQL_PASSWORD')
+            host = os.getenv('MYSQL_HOST')
+            port = os.getenv('MYSQL_PORT')
+            database = os.getenv('MYSQL_DATABASE')
 
-try:
-    engine = get_connection()
-    st.success("Connected to MoPhones Credit Database")
-except Exception as e:
-    st.error(f" Connection Failed: {e}")
-    st.info("Check your secrets.toml or .env file")
-    st.stop()
+            if not all([user, password, host, port, database]):
+                st.error("Missing database credentials in .env file")
+                st.stop()
+
+            connection_string = f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}"
+            st.success(" Connected using .env (Local)")
+
+        engine = create_engine(connection_string, pool_pre_ping=True)
+        return engine
+
+    except Exception as e:
+        st.error(f"Connection Failed: {e}")
+        st.info("Please check your `.streamlit/secrets.toml` configuration.")
+        st.stop()
+
+engine = get_connection()
+
 
 # ==================== LOAD DATA ====================
 with engine.connect() as conn:
