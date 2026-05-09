@@ -3,5 +3,3 @@ pandas
 plotly
 sqlalchemy
 pymysql
-python-dotenv
-mysqlclient
