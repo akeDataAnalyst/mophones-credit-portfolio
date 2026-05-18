@@ -5,7 +5,7 @@
 
 ## Project Overview
 
-This project demonstrates the full end-to-end data analytics lifecycle for a fintech lending portfolio — from raw data to production-grade modeling and self-service BI dashboard. It closely mirrors the real challenges faced by MoPhones in managing credit risk while driving growth through device financing.
+This project demonstrates the full end-to-end data analytics lifecycle for a fintech lending portfolio - from raw data to production-grade modeling and self-service BI dashboard. It closely mirrors the real challenges faced by MoPhones in managing credit risk while driving growth through device financing.
 
 ---
 
